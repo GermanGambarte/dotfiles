@@ -1,0 +1,207 @@
+{
+  // Editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'JetBrains Mono','Cascadia Code'",
+  "editor.fontLigatures": true,
+  "editor.fontVariations": true,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.guides.indentation": false,
+  "editor.lineHeight": 30,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "none",
+  "editor.rulers": [80],
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.tabSize": 2,
+  // ErrorLens
+  "errorLens.messageBackgroundMode": "message",
+  "errorLens.fontStyleItalic": true,
+  "errorLens.padding": ".5ch 1ch",
+  // Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  // Extensions
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+  //Extras
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "'JetBrainsMono NFM'",
+  "window.menuBarVisibility": "hidden",
+  // GitLens
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "git.openRepositoryInParentFolders": "always",
+  // VIM-CONF
+  "vim.foldfix": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["leader", ";"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    // buffers
+    {
+      "before": ["leader", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "b", "l"],
+      "commands": ["workbench.action.moveEditorToRightGroup"]
+    },
+    {
+      "before": ["leader", "b", "h"],
+      "commands": ["workbench.action.moveEditorToLeftGroup"]
+    },
+    {
+      "before": ["leader", "b", "k"],
+      "commands": ["workbench.action.moveEditorToAbobetGroup"]
+    },
+    // Files
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "f", "b"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    // Diagnostics
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    // LSP
+    {
+      "before": ["leader", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "b", "j"],
+      "commands": ["workbench.action.moveEditorToBelowGroup"]
+    },
+    // Debugger
+    {
+      "before": ["leader", "d", "s"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    {
+      "before": ["leader", "d", "p"],
+      "commands": ["workbench.action.debug.pause"]
+    },
+    {
+      "before": ["leader", "d", "r"],
+      "commands": ["workbench.action.debug.restart"]
+    },
+    {
+      "before": ["leader", "d", "d"],
+      "commands": ["workbench.action.debug.disconnect"]
+    },
+    {
+      "before": ["leader", "d", "t"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["leader", "d", "b"],
+      "commands": ["workbench.action.debug.stepBack"]
+    },
+    {
+      "before": ["leader", "d", "c"],
+      "commands": ["workbench.action.debug.continue"]
+    },
+    {
+      "before": ["leader", "d", "C"],
+      "commands": ["workbench.debug.action.runToCursor"]
+    },
+    {
+      "before": ["leader", "d", "i"],
+      "commands": ["workbench.action.editor.stepInto"]
+    },
+    {
+      "before": ["leader", "d", "o"],
+      "commands": ["workbench.debug.action.stepOut"]
+    },
+    // Show views
+    {
+      "before": ["leader", "S", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["leader", "S", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["leader", "S", "s"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["leader", "S", "x"],
+      "commands": ["workbench.view.extensions"]
+    },
+    {
+      "before": ["leader", "S", "d"],
+      "commands": ["workbench.view.debug"]
+    }
+  ],
+  // Symbols
+  "symbols.hidesExplorerArrows": false,
+  // Typescript
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  //workbench
+  "workbench.activityBar.location": "top",
+  "workbench.colorCustomizations": {
+    "editor.selectionHighlightBorder": "#0000",
+    "editor.wordHighlightStrongBorder": "#0000",
+    "editor.wordHighlightBorder": "#0000",
+    "editorBracketMatch.border": "#0000",
+    "editorBracketMatch.background": "#bdbdbd20",
+    "list.focusOutline": "#bdbdbd17",
+    "list.focusForeground": "#ffffff9a"
+  },
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.iconTheme": "symbols",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "readme",
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "window.title": "${dirty}${activeEditorShort}",
+  "prettier.requireConfig": true,
+  "breadcrumbs.enabled": false,
+  "workbench.layoutControl.enabled": false,
+}
