@@ -1,5 +1,8 @@
 return {
   'stevearc/oil.nvim',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons'
+  },
   opts = {
     default_file_explorer = true,
     -- Buffer-local options to use for oil buffers
@@ -30,7 +33,7 @@ return {
     cleanup_delay_ms = 2000,
     -- Set to true to autosave buffers that are updated with LSP willRenameFiles
     -- Set to "unmodified" to only save unmodified buffers
-    lsp_rename_autosave = false,
+    -- lsp_rename_autosave = false,
     -- Constrain the cursor to the editable parts of the oil buffer
     -- Set to `false` to disable, or "name" to keep it on the file names
     constrain_cursor = 'editable',

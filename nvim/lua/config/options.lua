@@ -1,4 +1,9 @@
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- Set to true if you have a Nerd Font installed
+vim.g.have_nerd_font = true
+
 vim.opt.cursorline = true
 vim.opt.fillchars:append({ eob = ' ' })
 
@@ -23,11 +28,16 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
 vim.opt.undofile = true
 
+-- Configure how new splits should be opened
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.scrolloff = 5
-vim.opt.sidescrolloff = 5
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
 vim.opt.signcolumn = 'yes'
 vim.opt.isfname:append('@-@')
 
@@ -42,9 +52,3 @@ vim.opt.guicursor = table.concat({
   'r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100',
 }, ',')
 
--- vim.g.netrw_winsize = 40
--- vim.g.netrw_banner = 0
--- vim.g.netrw_keepdir = 0
--- vim.g.netrw_sort_sequence = [[[\/]$,*]]
--- vim.g.netrw_liststyle = 3
--- vim.g.netrw_list_hide = vim.fn['netrw_gitignore#Hide']()
