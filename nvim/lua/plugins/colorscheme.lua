@@ -10,7 +10,7 @@ return {
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        transparent = true, -- do not set background color
+        transparent = false, -- do not set background color
         dimInactive = false, -- dim inactive window `:h hl-NormalNC`
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
         colors = {
@@ -77,7 +77,7 @@ return {
     name = 'rose-pine',
     config = function()
       require('rose-pine').setup({
-        variant = 'moon', -- auto, main, moon, or dawn
+        variant = 'main', -- auto, main, moon, or dawn
         dark_variant = 'moon', -- main, moon, or dawn
         dim_inactive_windows = false,
         extend_background_behind_borders = true,
@@ -129,6 +129,7 @@ return {
 
           TelescopePromptNormal = { fg = 'text', bg = 'surface' },
           TelescopePromptBorder = { fg = 'surface', bg = 'surface' },
+          -- String = { fg = 'love' },
         },
         styles = {
           bold = true,
@@ -136,7 +137,7 @@ return {
           transparency = false,
         },
       })
-      -- vim.cmd([[colorscheme rose-pine-moon]])
+      -- vim.cmd([[colorscheme rose-pine]])
     end,
   },
 }

@@ -1,4 +1,5 @@
 local keymap = vim.keymap.set
+
 -- swap selected lines
 keymap('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Swap whit line below' })
 keymap('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Swap whit line above' })
@@ -6,7 +7,7 @@ keymap('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Swap whit line above' })
 keymap('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
 keymap('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })
 
-keymap('n', '<leader>a', 'ggVG', { desc = 'Select all' })
+-- keymap('n', '<leader>a', 'ggVG', { desc = 'Select all' })
 keymap('n', '<C-d>', '<C-d>zz')
 keymap('n', '<C-u>', '<C-u>zz')
 keymap('n', 'n', 'nzzzv')
