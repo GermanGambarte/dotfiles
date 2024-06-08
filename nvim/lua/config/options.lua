@@ -45,10 +45,17 @@ vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
 
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldcolumn = '0'
+vim.opt.foldtext = ''
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldnestmax = 4
+
 vim.opt.colorcolumn = '80'
 vim.opt.guicursor = table.concat({
   'n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100',
   'i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100',
   'r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100',
 }, ',')
-

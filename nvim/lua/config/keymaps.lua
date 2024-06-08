@@ -30,13 +30,6 @@ keymap('n', 'Q', '<nop>')
 keymap('n', '<C-s>', '<cmd>w<CR>')
 keymap('n', '<C-S>', '<cmd>wa<CR>')
 
-keymap(
-  'n',
-  '<leader>e',
-  "<cmd>lua require('oil').toggle_float()<CR>",
-  { desc = 'Toogle tree' }
-)
-
 keymap('n', '<leader>ch', function()
   vim.lsp.inlay_hint(0, nil)
 end, { desc = 'Toggle Inlay Hints' })
