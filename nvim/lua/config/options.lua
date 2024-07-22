@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.background = 'dark'
+
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
@@ -10,19 +12,20 @@ vim.opt.fillchars:append({ eob = ' ' })
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- sane dafaults
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-
+vim.opt.wrap = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.opt.cindent = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.wrap = false
-
+-- Allow plugins like undotree to work well
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
@@ -45,6 +48,7 @@ vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
 
+-- Nice code folding
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldcolumn = '0'

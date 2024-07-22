@@ -6,31 +6,18 @@ return {
       border = 'single',
     },
     plugins = { spelling = true },
-    defaults = {
-      mode = { 'n', 'v' },
-      -- ["g"] = { name = "+goto" },
-      -- ['gs'] = { name = '+surround' },
-      -- ["]"] = { name = "+next" },
-      -- ["["] = { name = "+prev" },
-      -- ["<leader><tab>"] = { name = "+tabs" },
-      ['<leader>a'] = { name = 'Add File To Harpoon' },
-      ['<leader>b'] = { name = '+buffer' },
-      ['<leader>c'] = { name = '+code' },
-      -- ['<leader>f'] = { name = '+file/find' },
-      ['<leader>g'] = { name = '+git' },
-      -- ['<leader>r'] = { name = '+request' },
-      ['<leader>h'] = { name = '+harpoon' },
-      -- ["<leader>gh"] = { name = "+hunks" },
-      -- ["<leader>q"] = { name = "+quit/session" },
-      ['<leader>s'] = { name = '+search' },
-      ['<leader>u'] = { name = '+ui' },
-      -- ["<leader>w"] = { name = "+windows" },
-      -- ['<leader>x'] = { name = '+diagnostics/quickfix' },
-    },
   },
-  config = function(_, opts)
+  config = function()
     local wk = require('which-key')
-    wk.setup(opts)
-    wk.register(opts.defaults)
+    wk.add({
+      { '<leader>b', desc = '+buffers' },
+      { '<leader>p', desc = 'paste from clipboard' },
+      { '<leader>y', desc = 'yank to clipboard' },
+      { '<leader>t', desc = 'open a terminal' },
+      { '<leader>c', desc = '+code' },
+      { '<leader>g', desc = '+git' },
+      { '<leader>s', desc = '+search' },
+      { '<leader>x', desc = '+diagnostics' },
+    })
   end,
 }

@@ -1,35 +1,49 @@
-local keymap = vim.keymap.set
+local set = vim.keymap.set
 
 -- swap selected lines
-keymap('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Swap whit line below' })
-keymap('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Swap whit line above' })
+set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Swap whit line below' })
+set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Swap whit line above' })
 
-keymap('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
-keymap('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })
+set('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
+set('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })
 
 -- keymap('n', '<leader>a', 'ggVG', { desc = 'Select all' })
-keymap('n', '<C-d>', '<C-d>zz')
-keymap('n', '<C-u>', '<C-u>zz')
-keymap('n', 'n', 'nzzzv')
-keymap('n', 'N', 'Nzzzv')
+set('n', '<C-d>', '<C-d>zz')
+set('n', '<C-u>', '<C-u>zz')
+set('n', 'n', 'nzzzv')
+set('n', 'N', 'Nzzzv')
 
 -- buffers
-keymap('n', '<S-h>', '<cmd>bprevious<CR>')
-keymap('n', '<S-l>', '<cmd>bnext<CR>')
-keymap('n', '<leader>bd', '<cmd>:bdelete<CR>')
+set('n', '<S-h>', '<cmd>bprevious<CR>')
+set('n', '<S-l>', '<cmd>bnext<CR>')
+set('n', '<leader>bd', '<cmd>:bdelete<CR>')
+
+-- tabs
+set('n', '<left>', 'gT')
+set('n', '<right>', 'gt')
 
 -- greatest remap ever
-keymap('n', '<leader>p', [["+]])
+set('n', '<leader>p', [["+]])
+
+-- keep things highlighted after moving with < and >
+set('v', '<', '<gv')
+set('v', '>', '>gv')
 
 -- next greatest remap ever : asbjornHaland
-keymap({ 'n', 'v' }, '<leader>y', [["+y]])
-keymap({ 'n', 'v' }, '<leader>p', [["+p]])
-keymap({ 'n', 'v' }, '<leader>d', [["+d]])
+set({ 'n', 'v' }, '<leader>y', [["+y]])
+set({ 'n', 'v' }, '<leader>p', [["+p]])
+set({ 'n', 'v' }, '<leader>d', [["+d]])
 
-keymap('n', 'Q', '<nop>')
-keymap('n', '<C-s>', '<cmd>w<CR>')
-keymap('n', '<C-S>', '<cmd>wa<CR>')
+set('n', 'Q', '<nop>')
+set('n', '<C-s>', '<cmd>w<CR>')
+set('n', '<C-S>', '<cmd>wa<CR>')
 
-keymap('n', '<leader>ch', function()
+-- These mappings control the size of splits (height/width)
+set('n', '<M-h>', '<c-w>5<')
+set('n', '<M-l>', '<c-w>5>')
+set('n', '<M-k>', '<C-W>+')
+set('n', '<M-j>', '<C-W>-')
+
+set('n', '<leader>ch', function()
   vim.lsp.inlay_hint(0, nil)
 end, { desc = 'Toggle Inlay Hints' })
