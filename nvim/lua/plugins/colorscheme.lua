@@ -8,15 +8,6 @@ return {
     end,
   },
   {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      -- vim.cmd('colorscheme tokionight')
-    end,
-  },
-  {
     'rebelot/kanagawa.nvim',
     config = function()
       require('kanagawa').setup({
