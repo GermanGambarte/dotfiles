@@ -47,3 +47,18 @@ set('n', '<M-j>', '<C-W>-')
 set('n', '<leader>ch', function()
   vim.lsp.inlay_hint(0, nil)
 end, { desc = 'Toggle Inlay Hints' })
+
+function CompileAndRun()
+  vim.cmd('w')
+  vim.cmd('!g++ % -o %<')
+  if vim.v.shell_error == 0 then
+    vim.cmd('! %<')
+  end
+end
+
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>cr',
+  ':lua CompileAndRun()<CR>',
+  { noremap = true, silent = true }
+)

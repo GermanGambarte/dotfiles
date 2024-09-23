@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Verifica si se proporcionó un nombre de archivo
+if [ -z "$1" ]; then
+    echo "Uso: $0 archivo.cpp [argumentos]"
+    exit 1
+fi
+
+# Compila el archivo C++
+g++ -o output "$1"
+
+# Verifica si la compilación fue exitosa
+if [ $? -eq 0 ]; then
+    echo "Compilación exitosa. Ejecutando el programa..."
+    # Ejecuta el programa compilado con los argumentos adicionales
+    ./output "${@:2}"
+else
+    echo "Error en la compilación."
+    exit 1
+fi
